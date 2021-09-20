@@ -31,6 +31,12 @@ body {
     position: relative;
     background: #003147;
     padding: 40px;
+    transform: translateX(200%);
+    transition: transform 2s ease;   
+}
+
+.container .left-side.show {
+    transform: translateX(0)
 }
 
 .profileText {
@@ -94,6 +100,7 @@ body {
     padding-top: 40px;
 }
 
+
 .title {
     color: white;
     text-transform: uppercase;
@@ -154,12 +161,40 @@ body {
     margin-top: 5px;
 }
 
-.contactInfo.languages .percent div {
+.contactInfo.languages .percent.nl div {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     background: #03a9f4;
+    animation: nl 2.4s ;
+}
+
+@keyframes nl {
+    0%{
+        width: 0%
+    }
+    100% {
+        width: 95%;
+    }
+}
+
+.contactInfo.languages .percent.eng div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+    animation: eng 2.4s ;
+}
+
+@keyframes eng {
+    0%{
+        width: 0%
+    }
+    100% {
+        width: 85%;
+    }
 }
 
 .container .right-side {
@@ -182,6 +217,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
+}
+
+.title2:hover {
+    color: orange;
 }
 
 p {
@@ -263,6 +302,20 @@ p {
     color: #03a9f4;
     font-size: 18px;
     margin: 0 5px;
+}
+
+button.print {
+    background-color: #003147;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.3) ;
+}
+
+button.print:hover {
+    background-color: #03a9f4;
+    transform: scale(1.1);
 }
 
 @media (max-width: 1000px) {
